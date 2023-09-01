@@ -25,6 +25,14 @@ function ConverterPage() {
               title="섭씨 화씨 변환기"
               link="/converter/fahrenheit-celsius-converter"
             />
+            <Tool
+              title="마일 킬로미터 변환기"
+              link="/converter/mile-kilometer-converter"
+            />
+            <Tool
+              title="평수 제곱미터 계산기"
+              link="/converter/pyong-square-meter-converter"
+            />
           </div>
         </div>
       </div>

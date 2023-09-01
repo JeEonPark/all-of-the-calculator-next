@@ -53,40 +53,41 @@ function BmiCalculator() {
 
       <div className="wide-container">
         <div className="container">
-          <div className="form-group form-inline"> {/* Add form-inline class */}
-            <h4>키 (cm):</h4>
-            <input
-              type="number"
-              id="height"
-              className="form-control"
-              value={height}
-              onChange={(e) => setHeight(e.target.value)}
-              placeholder="키를 입력하세요"
-            />
+          <div className="small-container">
+            <div className="form-group form-inline"> {/* Add form-inline class */}
+              <h4>키 (cm):</h4>
+              <input
+                type="number"
+                id="height"
+                className="form-control"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                placeholder="키를 입력하세요"
+              />
 
-            <h4 style={{ marginTop: '20px' }}>체중 (kg):</h4>
-            <input
-              type="number"
-              id="weight"
-              className="form-control"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-              placeholder="체중을 입력하세요"
-            />
-          </div>
-
-          <button className="btn btn-primary" onClick={calculateBMI}>
-            BMI 계산
-          </button>
-
-          {bmiResult !== null && (
-            <div className="result">
-              <h4>결과:</h4>
-              <p className="result-text"><strong>BMI: {bmiResult}</strong></p>
-              <p className="result-text"><strong>비만도: {getBmiCategory()}</strong></p>
+              <h4 style={{ marginTop: '20px' }}>체중 (kg):</h4>
+              <input
+                type="number"
+                id="weight"
+                className="form-control"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                placeholder="체중을 입력하세요"
+              />
             </div>
-          )}
 
+            <button className="btn btn-primary" onClick={calculateBMI}>
+              BMI 계산
+            </button>
+
+            {bmiResult !== null && (
+              <div className="result">
+                <h4>결과:</h4>
+                <p className="result-text"><strong>BMI: {bmiResult}</strong></p>
+                <p className="result-text"><strong>비만도: {getBmiCategory()}</strong></p>
+              </div>
+            )}
+          </div>
 
           <div className="info">
             <h2>BMI(체질량지수) 계산기 설명:</h2>

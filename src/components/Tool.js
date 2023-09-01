@@ -13,7 +13,7 @@ function Tool({ title, link }) {
           background-color: #fff;
           border: 1px solid #ddd;
           border-radius: 5px;
-          padding: 15px 0;
+          padding: 20px 0;
           margin-bottom: 20px;
           text-align: center;
           cursor: pointer;

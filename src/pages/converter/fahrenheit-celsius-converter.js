@@ -42,29 +42,32 @@ function FahrenheitCelciusConverter() {
 
       <div className="wide-container">
         <div className="container">
-          <div className="form-group">
-            <h4>섭씨 (°C):</h4>
-            <input
-              type="number"
-              id="celsius"
-              className="form-control"
-              value={celsius}
-              onChange={(e) => handleCelsiusChange(e.target.value)}
-              placeholder="섭씨를 입력하세요"
-            />
+          <div className="small-container">
+            <div className="form-group">
+              <h4>섭씨 (°C):</h4>
+              <input
+                type="number"
+                id="celsius"
+                className="form-control"
+                value={celsius}
+                onChange={(e) => handleCelsiusChange(e.target.value)}
+                placeholder="섭씨를 입력하세요"
+              />
+            </div>
+
+            <div className="form-group">
+              <h4>화씨 (°F):</h4>
+              <input
+                type="number"
+                id="fahrenheit"
+                className="form-control"
+                value={fahrenheit}
+                onChange={(e) => handleFahrenheitChange(e.target.value)}
+                placeholder="화씨를 입력하세요"
+              />
+            </div>
           </div>
 
-          <div className="form-group">
-            <h4>화씨 (°F):</h4>
-            <input
-              type="number"
-              id="fahrenheit"
-              className="form-control"
-              value={fahrenheit}
-              onChange={(e) => handleFahrenheitChange(e.target.value)}
-              placeholder="화씨를 입력하세요"
-            />
-          </div>
 
           <div className="info">
             <h2>섭씨 화씨 변환기 설명:</h2>

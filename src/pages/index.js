@@ -19,16 +19,14 @@ function HomePage() {
         <div className="container">
           <h3 style={{ marginBottom: '20px' }}>카테고리</h3>
           <div className="row">
-            <Category
-              title="수학"
-              description="각종 수학적 계산기"
-              link="/math"
-            />
-            <Category title="금융" description="돈과 관련된 모든 계산기" link="/" />
+            <Category title="수학" description="각종 수학적 계산기" link="/math" />
+            <Category title="금융" description="돈과 관련된 모든 계산기" link="/finance" />
+            <Category title="날짜" description="날짜 계산 및 디데이 관련된 도구" link="/date" />
+            <Category title="도구" description="각종 유용한 도구들" link="/tools" />
             <Category title="건강" description="BMI 계산기 등 건강 관련 도구" link="/health" />
             <Category title="단위 변환기" description="m, cm 등 여러가지 단위 변환기" link="/converter" />
-            <Category title="웹" description="웹 디자인 및 개발 도구" link="/" />
-            <Category title="이모티콘" description="이모티콘, 이모지 관련 도구" link="/" />
+            {/* <Category title="웹" description="웹 디자인 및 개발 도구" link="/" />
+            <Category title="이모티콘" description="이모티콘, 이모지 관련 도구" link="/" /> */}
           </div>
         </div>
       </div>

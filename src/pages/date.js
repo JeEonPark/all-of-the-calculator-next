@@ -1,20 +1,20 @@
 import Tool from "@/components/Tool";
 import Head from 'next/head';
 
-function HealthPage() {
+function DatePage() {
   return (
     <div>
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="건강과 관련된 계산기 및 편리한 도구" />
-        <title>건강 - 계산기의 모든 것</title>
+        <title>날짜 - 계산기의 모든 것</title>
       </Head>
 
       <div className="jumbotron">
         <div className="container">
-          <h1>건강 계산기</h1>
-          <p>각종 건강 계산기</p>
+          <h1>날짜 계산기</h1>
+          <p>각종 날짜 계산기</p>
         </div>
       </div>
 
@@ -23,16 +23,8 @@ function HealthPage() {
           <h3 style={{ marginBottom: '20px' }}>카테고리 - 건강</h3>
           <div className="row">
             <Tool
-              title="BMI 계산기"
-              link="/health/bmi-calculator"
-            />
-            <Tool
-              title="배란일 계산기"
-              link="/health/ovulation-calculator"
-            />
-            <Tool
-              title="기초대사량 계산기"
-              link="/health/bmr-calculator"
+              title="D-Day (디데이) 계산기"
+              link="/date/d-day-calculator"
             />
           </div>
         </div>
@@ -42,4 +34,4 @@ function HealthPage() {
   )
 }
 
-export default HealthPage;
+export default DatePage;
