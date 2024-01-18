@@ -24,6 +24,8 @@ function ToolsPage() {
           <div className="row">
             <Tool title="글자수 세기" link="/tools/character-count-calculator" />
             <Tool title="랜덤 번호 추첨기" link="/tools/random-number-generator" />
+            <Tool title="QR 코드 생성기" link="/tools/qrcode-generator" />
+            <Tool title="스톱워치 타이머" link="/tools/stopwatch" />
           </div>
         </div>
       </div>

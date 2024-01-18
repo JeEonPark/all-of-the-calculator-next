@@ -77,6 +77,14 @@ function App({ Component, pageProps }) {
           margin-top: 10px;
         }
 
+        .btn-secondary {
+          margin-top: 10px;
+        }
+
+        .btn-danger {
+          margin-top: 10px;
+        }
+
         .result {
           margin-top: 20px;
           padding: 10px;

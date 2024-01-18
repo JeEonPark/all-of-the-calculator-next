@@ -24,6 +24,7 @@ function FinancePage() {
           <div className="row">
             <Tool title="주식 수익률 계산기" link="/finance/stock-profit-calculator" />
             <Tool title="할인율 계산기" link="/finance/discount-calculator" />
+            <Tool title="배당금 계산기" link="/finance/dividend-calculator" />
           </div>
         </div>
       </div>

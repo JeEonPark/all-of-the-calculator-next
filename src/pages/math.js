@@ -30,6 +30,8 @@ function MathPage() {
             <Tool title="10진수 16진수 변환기" link="/math/decimal-hexadecimal-converter" />
             <h5 style={{ marginBottom: "20px" }}>수학 계산기</h5>
             <Tool title="평균 계산기" link="/math/average-calculator" />
+            <Tool title="원의 넓이 계산기" link="/math/circle-area-calculator" />
+            <Tool title="팩토리얼 계산기" link="/math/factorial-calculator" />
           </div>
         </div>
       </div>
