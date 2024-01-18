@@ -1,32 +1,32 @@
 import { useState } from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import Link from "next/link";
 
 function OctalHexadecimalConverter() {
-  const [octal, setOctal] = useState('');
-  const [hexadecimal, setHexadecimal] = useState('');
+  const [octal, setOctal] = useState("");
+  const [hexadecimal, setHexadecimal] = useState("");
 
   const handleOctalChange = (value) => {
-    const cleanValue = value.replace(/[^0-7]/g, '');
+    const cleanValue = value.replace(/[^0-7]/g, "");
     setOctal(cleanValue);
 
-    if (cleanValue !== '') {
+    if (cleanValue !== "") {
       const hexadecimalValue = parseInt(cleanValue, 8).toString(16).toUpperCase();
       setHexadecimal(hexadecimalValue);
     } else {
-      setHexadecimal('');
+      setHexadecimal("");
     }
   };
 
   const handleHexadecimalChange = (value) => {
-    const cleanValue = value.replace(/[^0-9A-Fa-f]/g, '');
+    const cleanValue = value.replace(/[^0-9A-Fa-f]/g, "");
     setHexadecimal(cleanValue.toUpperCase());
 
-    if (cleanValue !== '') {
+    if (cleanValue !== "") {
       const octalValue = parseInt(cleanValue, 16).toString(8);
       setOctal(octalValue);
     } else {
-      setOctal('');
+      setOctal("");
     }
   };
 
@@ -35,8 +35,11 @@ function OctalHexadecimalConverter() {
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="8진수와 16진수를 변환하는 간단한 변환 도구입니다." />
-        <title>8진수 16진수 변환기 - 계산기의 모든 것</title>
+        <meta
+          name="description"
+          content="8진수 16진수 변환기는 8진수와 16진수를 서로 변환하는 간단한 도구입니다. 입력된 8진수를 16진수로 변환하거나, 입력된 16진수를 8진수로 변환할 수 있습니다."
+        />
+        <title>8진수 16진수 변환기 | 계산기의 모든 것</title>
       </Head>
       <div className="jumbotron">
         <div className="container">
@@ -76,19 +79,25 @@ function OctalHexadecimalConverter() {
           <div className="info">
             <h2>8진수 16진수 변환기 설명:</h2>
             <p>
-              8진수 16진수 변환기는 8진수와 16진수를 서로 변환하는 간단한 도구입니다.
-              입력된 8진수를 16진수로 변환하거나, 입력된 16진수를 8진수로 변환할 수 있습니다.
+              8진수 16진수 변환기는 8진수와 16진수를 서로 변환하는 간단한 도구입니다. 입력된 8진수를 16진수로
+              변환하거나, 입력된 16진수를 8진수로 변환할 수 있습니다.
             </p>
-            <p>
-              이 변환기는 사용자가 8진수나 16진수를 입력하면 자동으로 변환 결과를 제공합니다.
-            </p>
+            <p>이 변환기는 사용자가 8진수나 16진수를 입력하면 자동으로 변환 결과를 제공합니다.</p>
             <br />
             <h2>더 많은 진수 변환기</h2>
             <ul>
-              <li><Link href="./binary-octal-converter">2진수 8진수 변환기</Link></li>
-              <li><Link href="./binary-decimal-converter">2진수 10진수 변환기</Link></li>
-              <li><Link href="./binary-hexadecimal-converter">2진수 16진수 변환기</Link></li>
-              <li><Link href="./decimal-hexadecimal-converter">10진수 16진수 변환기</Link></li>
+              <li>
+                <Link href="./binary-octal-converter">2진수 8진수 변환기</Link>
+              </li>
+              <li>
+                <Link href="./binary-decimal-converter">2진수 10진수 변환기</Link>
+              </li>
+              <li>
+                <Link href="./binary-hexadecimal-converter">2진수 16진수 변환기</Link>
+              </li>
+              <li>
+                <Link href="./decimal-hexadecimal-converter">10진수 16진수 변환기</Link>
+              </li>
             </ul>
           </div>
         </div>

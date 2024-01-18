@@ -1,5 +1,5 @@
 import Tool from "@/components/Tool";
-import Head from 'next/head';
+import Head from "next/head";
 
 function ConverterPage() {
   return (
@@ -8,7 +8,7 @@ function ConverterPage() {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="온도 변환, 길이 환산 등 단위 변환기" />
-        <title>단위 변환기 - 계산기의 모든 것</title>
+        <title>단위 변환기 | 계산기의 모든 것</title>
       </Head>
       <div className="jumbotron">
         <div className="container">
@@ -19,26 +19,16 @@ function ConverterPage() {
 
       <div className="wide-container">
         <div className="container">
-          <h3 style={{ marginBottom: '20px' }}>카테고리 - 단위 변환기</h3>
+          <h3 style={{ marginBottom: "20px" }}>카테고리 - 단위 변환기</h3>
           <div className="row">
-            <Tool
-              title="섭씨 화씨 변환기"
-              link="/converter/fahrenheit-celsius-converter"
-            />
-            <Tool
-              title="마일 킬로미터 변환기"
-              link="/converter/mile-kilometer-converter"
-            />
-            <Tool
-              title="평수 제곱미터 계산기"
-              link="/converter/pyong-square-meter-converter"
-            />
+            <Tool title="섭씨 화씨 변환기" link="/converter/fahrenheit-celsius-converter" />
+            <Tool title="마일 킬로미터 변환기" link="/converter/mile-kilometer-converter" />
+            <Tool title="평수 제곱미터 계산기" link="/converter/pyong-square-meter-converter" />
           </div>
         </div>
       </div>
-
     </div>
-  )
+  );
 }
 
 export default ConverterPage;

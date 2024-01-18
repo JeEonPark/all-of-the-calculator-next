@@ -1,32 +1,32 @@
 import { useState } from "react";
-import Head from 'next/head';
+import Head from "next/head";
 import Link from "next/link";
 
 function BinaryDecimalConverter() {
-  const [binary, setBinary] = useState('');
-  const [decimal, setDecimal] = useState('');
+  const [binary, setBinary] = useState("");
+  const [decimal, setDecimal] = useState("");
 
   const handleBinaryChange = (value) => {
-    const cleanValue = value.replace(/[^01]/g, '');
+    const cleanValue = value.replace(/[^01]/g, "");
     setBinary(cleanValue);
 
-    if (cleanValue !== '') {
+    if (cleanValue !== "") {
       const decimalValue = parseInt(cleanValue, 2);
       setDecimal(decimalValue.toString());
     } else {
-      setDecimal('');
+      setDecimal("");
     }
   };
 
   const handleDecimalChange = (value) => {
-    const cleanValue = value.replace(/\D/g, '');
+    const cleanValue = value.replace(/\D/g, "");
     setDecimal(cleanValue);
 
-    if (cleanValue !== '') {
+    if (cleanValue !== "") {
       const binaryValue = parseInt(cleanValue, 10).toString(2);
       setBinary(binaryValue);
     } else {
-      setBinary('');
+      setBinary("");
     }
   };
 
@@ -35,8 +35,11 @@ function BinaryDecimalConverter() {
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="2진수와 10진수를 변환하는 간단한 변환 도구입니다." />
-        <title>2진수 10진수 변환기 - 계산기의 모든 것</title>
+        <meta
+          name="description"
+          content="2진수 10진수 변환기는 2진수와 10진수를 서로 변환하는 간단한 도구입니다. 입력된 2진수를 10진수로 변환하거나, 입력된 10진수를 2진수로 변환할 수 있습니다."
+        />
+        <title>2진수 10진수 변환기 | 계산기의 모든 것</title>
       </Head>
       <div className="jumbotron">
         <div className="container">
@@ -76,19 +79,25 @@ function BinaryDecimalConverter() {
           <div className="info">
             <h2>2진수 10진수 변환기 설명:</h2>
             <p>
-              2진수 10진수 변환기는 2진수와 10진수를 서로 변환하는 간단한 도구입니다.
-              입력된 2진수를 10진수로 변환하거나, 입력된 10진수를 2진수로 변환할 수 있습니다.
+              2진수 10진수 변환기는 2진수와 10진수를 서로 변환하는 간단한 도구입니다. 입력된 2진수를 10진수로
+              변환하거나, 입력된 10진수를 2진수로 변환할 수 있습니다.
             </p>
-            <p>
-              이 변환기는 사용자가 2진수나 10진수를 입력하면 자동으로 변환 결과를 제공합니다.
-            </p>
+            <p>이 변환기는 사용자가 2진수나 10진수를 입력하면 자동으로 변환 결과를 제공합니다.</p>
             <br />
             <h2>더 많은 진수 변환기</h2>
             <ul>
-              <li><Link href="./binary-octal-converter">2진수 8진수 변환기</Link></li>
-              <li><Link href="./binary-hexadecimal-converter">2진수 16진수 변환기</Link></li>
-              <li><Link href="./octal-hexadecimal-converter">8진수 16진수 변환기</Link></li>
-              <li><Link href="./decimal-hexadecimal-converter">10진수 16진수 변환기</Link></li>
+              <li>
+                <Link href="./binary-octal-converter">2진수 8진수 변환기</Link>
+              </li>
+              <li>
+                <Link href="./binary-hexadecimal-converter">2진수 16진수 변환기</Link>
+              </li>
+              <li>
+                <Link href="./octal-hexadecimal-converter">8진수 16진수 변환기</Link>
+              </li>
+              <li>
+                <Link href="./decimal-hexadecimal-converter">10진수 16진수 변환기</Link>
+              </li>
             </ul>
           </div>
         </div>

@@ -1,7 +1,7 @@
-import Footer from '@/components/Footer';
-import NavigationBar from '@/components/NavigationBar';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Head from 'next/head';
+import Footer from "@/components/Footer";
+import NavigationBar from "@/components/NavigationBar";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Head from "next/head";
 
 function App({ Component, pageProps }) {
   return (
@@ -9,8 +9,12 @@ function App({ Component, pageProps }) {
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="계산기의 모든 것에 오신 것을 환영합니다. 다양한 유용한 도구를 이용해보세요." />
+        <meta
+          name="description"
+          content="계산기의 모든 것에 오신 것을 환영합니다. 다양한 유용한 도구를 이용해보세요."
+        />
         <meta name="keywords" content="계산기, 수학, 금융, 건강, 변환기, 웹 디자인, 생활" />
+        <link rel="icon" href="/favicon.ico" />
         <title>계산기의 모든 것</title>
       </Head>
       <NavigationBar />
@@ -18,7 +22,7 @@ function App({ Component, pageProps }) {
       <Footer />
       <style jsx global>{`
         a {
-          text-decoration : none;
+          text-decoration: none;
         }
 
         .wide-container {
@@ -58,7 +62,9 @@ function App({ Component, pageProps }) {
           font-size: 1.5rem;
         }
 
-        {/* 도구 랜딩 페이지 공통 */}
+         {
+          /* 도구 랜딩 페이지 공통 */
+        }
         .form-group {
           margin-bottom: 15px;
         }
@@ -134,7 +140,7 @@ function App({ Component, pageProps }) {
         }
       `}</style>
     </div>
-  )
+  );
 }
 
 export default App;

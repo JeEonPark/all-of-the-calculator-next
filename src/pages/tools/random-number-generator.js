@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Head from 'next/head';
+import Head from "next/head";
 
 function RandomNumberGenerator() {
   const [startNumber, setStartNumber] = useState(1);
@@ -62,8 +62,11 @@ function RandomNumberGenerator() {
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="랜덤 번호 추첨기" />
-        <title>랜덤 번호 추첨기 - 계산기의 모든 것</title>
+        <meta
+          name="description"
+          content="랜덤 번호 추첨기. 이 랜덤 번호 추첨기는 사용자가 지정한 범위에서 원하는 개수의 랜덤한 숫자를 추첨합니다. 중복 허용 여부를 선택할 수 있습니다."
+        />
+        <title>랜덤 번호 추첨기 | 계산기의 모든 것</title>
       </Head>
       <div className="jumbotron">
         <div className="container">
@@ -106,11 +109,7 @@ function RandomNumberGenerator() {
               />
               <br />
               <label>
-                <input
-                  type="checkbox"
-                  checked={allowDuplicates}
-                  onChange={handleAllowDuplicatesChange}
-                /> 중복 포함
+                <input type="checkbox" checked={allowDuplicates} onChange={handleAllowDuplicatesChange} /> 중복 포함
               </label>
             </div>
 
@@ -129,25 +128,22 @@ function RandomNumberGenerator() {
             <h2>랜덤 번호 추첨기 설명:</h2>
             <br />
             <p>
-              이 랜덤 번호 추첨기는 사용자가 지정한 범위에서 원하는 개수의 랜덤한 숫자를 추첨합니다.
-              중복 허용 여부를 선택할 수 있습니다.
+              이 랜덤 번호 추첨기는 사용자가 지정한 범위에서 원하는 개수의 랜덤한 숫자를 추첨합니다. 중복 허용 여부를
+              선택할 수 있습니다.
             </p>
             <br />
             <p>
-              시작 숫자와 끝 숫자를 설정하고 뽑을 숫자 개수를 입력한 후 "숫자 추첨하기" 버튼을 클릭하면
-              추첨 결과를 확인할 수 있습니다.
+              시작 숫자와 끝 숫자를 설정하고 뽑을 숫자 개수를 입력한 후 "숫자 추첨하기" 버튼을 클릭하면 추첨 결과를
+              확인할 수 있습니다.
             </p>
             <br />
-            <p>
-              중복 허용을 체크하지 않으면 같은 숫자가 중복되지 않도록 추첨됩니다.
-            </p>
+            <p>중복 허용을 체크하지 않으면 같은 숫자가 중복되지 않도록 추첨됩니다.</p>
             <br />
             <p>
-              이 추첨기를 사용하여 무작위 선택이 필요한 상황에서 활용하세요.
-              예를 들어 저녁 메뉴를 무작위로 정할 때, 뽑을 인원을 정할 때 등에 유용합니다.
+              이 추첨기를 사용하여 무작위 선택이 필요한 상황에서 활용하세요. 예를 들어 저녁 메뉴를 무작위로 정할 때,
+              뽑을 인원을 정할 때 등에 유용합니다.
             </p>
           </div>
-
         </div>
       </div>
     </div>

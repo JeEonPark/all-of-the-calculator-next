@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import Head from 'next/head';
+import Head from "next/head";
 
 function PyongSquareMeterConverter() {
-  const [pyong, setPyong] = useState('');
-  const [squareMeter, setSquareMeter] = useState('');
+  const [pyong, setPyong] = useState("");
+  const [squareMeter, setSquareMeter] = useState("");
 
   const handlePyongChange = (value) => {
     setPyong(value);
-    if (value !== '') {
+    if (value !== "") {
       const squareMeterValue = parseFloat(value) * 3.30579;
       setSquareMeter(squareMeterValue.toFixed(2));
     } else {
-      setSquareMeter('');
+      setSquareMeter("");
     }
   };
 
   const handleSquareMeterChange = (value) => {
     setSquareMeter(value);
-    if (value !== '') {
+    if (value !== "") {
       const pyongValue = parseFloat(value) / 3.30579;
       setPyong(pyongValue.toFixed(2));
     } else {
-      setPyong('');
+      setPyong("");
     }
   };
 
@@ -30,8 +30,11 @@ function PyongSquareMeterConverter() {
       <Head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="평수와 제곱미터를 변환하는 변환 도구입니다." />
-        <title>평수 제곱미터 변환기 - 계산기의 모든 것</title>
+        <meta
+          name="description"
+          content="평수와 제곱미터를 변환하는 변환 도구입니다. 입력된 평을 제곱미터로 변환하거나, 입력된 제곱미터를 평으로 변환할 수 있습니다. 변환하고자 하는 값을 각각의 입력 창에 입력한 후, 자동으로 변환이 이루어집니다."
+        />
+        <title>평수 제곱미터 변환기 | 계산기의 모든 것</title>
       </Head>
       <div className="jumbotron">
         <div className="container">
@@ -71,35 +74,24 @@ function PyongSquareMeterConverter() {
           <div className="info">
             <h2>평과 제곱미터 변환기 설명:</h2>
             <p>
-              평과 제곱미터를 변환하는 간단한 도구입니다.
-              입력된 평을 제곱미터로 변환하거나, 입력된 제곱미터를 평으로 변환할 수 있습니다.
+              평과 제곱미터를 변환하는 간단한 도구입니다. 입력된 평을 제곱미터로 변환하거나, 입력된 제곱미터를 평으로
+              변환할 수 있습니다.
             </p>
             <br />
 
             <h3>변환 공식:</h3>
-            <p>
-              평을 제곱미터로 변환하는 공식: 제곱미터 = 평 × 3.30579
-            </p>
-            <p>
-              제곱미터를 평으로 변환하는 공식: 평 = 제곱미터 ÷ 3.30579
-            </p>
+            <p>평을 제곱미터로 변환하는 공식: 제곱미터 = 평 × 3.30579</p>
+            <p>제곱미터를 평으로 변환하는 공식: 평 = 제곱미터 ÷ 3.30579</p>
             <br />
 
             <h3>사용 방법:</h3>
-            <p>
-              변환하고자 하는 값을 각각의 입력 창에 입력한 후, 자동으로 변환이 이루어집니다.
-            </p>
+            <p>변환하고자 하는 값을 각각의 입력 창에 입력한 후, 자동으로 변환이 이루어집니다.</p>
 
             <br />
             <h3>예시:</h3>
-            <p>
-              - 10 평을 제곱미터로 변환하면: 10 × 3.30579 ≈ 33.0579 m²
-            </p>
-            <p>
-              - 20 m²를 평으로 변환하면: 20 ÷ 3.30579 ≈ 6.0502 평
-            </p>
+            <p>- 10 평을 제곱미터로 변환하면: 10 × 3.30579 ≈ 33.0579 m²</p>
+            <p>- 20 m²를 평으로 변환하면: 20 ÷ 3.30579 ≈ 6.0502 평</p>
           </div>
-
         </div>
       </div>
     </div>
